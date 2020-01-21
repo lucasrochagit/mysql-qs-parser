@@ -1,8 +1,8 @@
-declare var queryStringsParserSql: queryStringsParser.QueryStringsParser
+declare var queryStringsParserSql: queryStringsParserSql.QueryStringsParserSql
 export = queryStringsParserSql
 
-declare namespace queryStringsParser {
-    export interface QueryStringsParser {
+declare namespace queryStringsParserSql {
+    export interface QueryStringsParserSql {
         (options?: IOptions): any
 
         parser(query?: string | object, options?: IOptions): any
@@ -14,6 +14,8 @@ declare namespace queryStringsParser {
         parsePagination(query?: string | object, pagination_default?: string): any
 
         parseFilter(query?: string | object, filter_default?: string): any
+
+        buildSql(tableName?: string, options ?: IOptions)
     }
 
 
