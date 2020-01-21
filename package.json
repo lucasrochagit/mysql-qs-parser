@@ -1,0 +1,50 @@
+{
+  "name": "mysql-qs-parser",
+  "version": "1.0.0",
+  "description": "Middleware to transform query strings in a format that's recognized by MYSQL database.",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "nyc --clean --all --reporter=text-summary mocha --opts test/mocha.opts test/**/*.spec.js",
+    "test:unit": "nyc --clean --all --reporter=text-summary mocha --opts test/mocha.opts test/unit/*.spec.js",
+    "test:integration": "nyc --clean --all --reporter=text-summary mocha --opts test/mocha.opts test/integration/*.spec.js",
+    "test:cov": "nyc --clean --all --reporter=html --reporter=text mocha --opts test/mocha.opts test/**/*.spec.js"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucasrochagit/mysql-qs-parser"
+  },
+  "author": "Lucas Rocha <lucas.rocha@nutes.uepb.edu.br>",
+  "contributors": [],
+  "keywords": [
+    "middleware",
+    "query",
+    "query-string",
+    "querystring",
+    "querystrings",
+    "qs",
+    "parser",
+    "stringfy",
+    "encode",
+    "decode",
+    "searchparams",
+    "url",
+    "string"
+  ],
+  "engines": {
+    "node": ">=6"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "express": "^4.17.1",
+    "mocha": "^6.2.1",
+    "nyc": "^14.1.1",
+    "supertest": "^4.0.2"
+  }
+}
