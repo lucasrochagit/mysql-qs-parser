@@ -1,0 +1,8 @@
+{
+    "reporter": "spec",
+    "require": "test/global.js",
+    "recursive": true,
+    "slow": 5000,
+    "timeout": 5000,
+    "exit": true
+}
