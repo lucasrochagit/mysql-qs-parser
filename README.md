@@ -98,27 +98,6 @@ app.listen(8080, () => console.log('app listening on port 8080'));
 
 # Available Functions
 
-## `buildSql()`
-
-The library has a function that transforms the query object into a query string that is understandable by MySQL. For 
-that, you can inform the name of the table where you want to apply the query, and the query string in MySQL format will
-be built based on the object of consultation.
-
-Example: 
-
-```js
-const qs = require('mysql-qs-parser');
-
-console.log('Default options:', qs.buildSql('users', qs.parser('?sort=-name&fields=name,age&name=*A')))
-console.log('Custom options:', qs.buildSql('users', qs.parser('?sort=-name&fields=name,age&name=*A', { pagination: 'LIMIT 10 OFFSET 0'})))
-
-/*
-    Default options: SELECT name,age FROM users WHERE name LIKE %A LIMIT 100 OFFSET 0 ORDER BY name DESC;
-    Custom options: SELECT name,age FROM users WHERE name LIKE %A LIMIT 10 OFFSET 0 ORDER BY name DESC;
-*/
-```
-
-
 ## `parser()`
 
 The library has a function that transform query strings into query objects, in the format defined by the library. You can
@@ -157,3 +136,22 @@ console.log('Custom options:', qs.parser('?sort=-name&fields=name,age&name=*A', 
 
 ```
 
+## `buildSql()`
+
+The library has a function that transforms the query object into a query string that is understandable by MySQL. For 
+that, you can inform the name of the table where you want to apply the query, and the query string in MySQL format will
+be built based on the object of consultation.
+
+Example: 
+
+```js
+const qs = require('mysql-qs-parser');
+
+console.log('Default options:', qs.buildSql('users', qs.parser('?sort=-name&fields=name,age&name=*A')))
+console.log('Custom options:', qs.buildSql('users', qs.parser('?sort=-name&fields=name,age&name=*A', { pagination: 'LIMIT 10 OFFSET 0'})))
+
+/*
+    Default options: SELECT name,age FROM users WHERE name LIKE %A LIMIT 100 OFFSET 0 ORDER BY name DESC;
+    Custom options: SELECT name,age FROM users WHERE name LIKE %A LIMIT 10 OFFSET 0 ORDER BY name DESC;
+*/
+```
