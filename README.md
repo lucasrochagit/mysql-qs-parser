@@ -70,7 +70,7 @@ const qs = require('mysql-qs-parser');
 const app = express();
 
 app.use(qs({
-    sort: 'created_at=ASC',
+    sort: 'created_at ASC',
     pagination: 'LIMIT 10 OFFSET 0'
 }));
 

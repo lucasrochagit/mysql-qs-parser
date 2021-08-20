@@ -1,6 +1,6 @@
 {
   "name": "mysql-qs-parser",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Middleware to transform query strings in a format that's recognized by MYSQL database.",
   "license": "MIT",
   "main": "index.js",
