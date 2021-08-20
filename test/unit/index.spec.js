@@ -6,7 +6,7 @@ describe('QueryStrings: Index', function () {
         context('when want to build a query string based on query parameters', function () {
             it('should return a sql string', function (done) {
                 const table = 'users'
-                const expected = 'SELECT * FROM users LIMIT 100 OFFSET 0 ORDER BY created_at=DESC;'
+                const expected = 'SELECT * FROM users LIMIT 100 OFFSET 0;'
                 validate(qs.buildSql(table, default_options), expected, 'string')
                 done()
             })
@@ -108,7 +108,7 @@ describe('QueryStrings: Index', function () {
         })
     })
 
-    describe('qs', function () {
+    describe('qs()', function () {
         context('when instance the class without default params', function () {
             it('should do something', function (done) {
                 const any = qs({})

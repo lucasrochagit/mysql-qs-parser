@@ -23,7 +23,7 @@ exports = module.exports.parsePagination = function (_query, _default) {
 }
 
 exports = module.exports.parseFilter = function (_query, _default) {
-    return read.parsefilters(_query, _default || '')
+    return read.parseFilter(_query, _default || '')
 }
 
 exports = module.exports.buildSql = function (_table, _default) {
