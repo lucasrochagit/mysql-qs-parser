@@ -6,7 +6,7 @@ const app = express()
 
 const custom_options = {
     fields: 'name,age,occupation',
-    pagination: 'LIMIT 10 OFFSET 0',
+    pagination: 'LIMIT 100 OFFSET 0',
     filters: '',
     sort: 'created_at ASC'
 }
