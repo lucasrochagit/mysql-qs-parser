@@ -11,7 +11,7 @@ middleware to work correctly. Tests with other frameworks were not performed.
 
 Use the follow command:
 
-`npm i --save query-strings-parser`
+`npm i --save mysql-qs-parser`
 
 # Usage Examples
 
